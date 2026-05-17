@@ -1,0 +1,42 @@
+# --- IDE ve Editor Dosyaları ---
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# --- Python Bağımlılıkları ve Geçici Dosyalar ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+build/
+dist/
+
+# --- Hassas Veriler (Secrets & Keys) ---
+# .env dosyaları (API anahtarları içerir)
+.env
+.env.*
+# Backend secrets klasörü (Firebase JSON vb.)
+proje_backend/secrets/
+secrets/
+# Özel anahtar dosyaları
+*.pem
+*.key
+
+# --- Veritabanı ve Büyük Veri Setleri ---
+proje_backend/chroma_db/
+*.sqlite3
+
+# --- Flutter / Dart Dosyaları ---
+# (Alt klasördeki .gitignore'lar olsa da kök dizinden de kontrol ediyoruz)
+**/build/
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+aiprojeflutter/ios/Flutter/Generated.xcconfig
+aiprojeflutter/android/key.properties
+aiprojeflutter/windows/flutter/ephemeral/

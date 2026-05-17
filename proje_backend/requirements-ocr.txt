@@ -1,0 +1,2 @@
+# Sadece UNSTRUCTURED_OCR=1 kullanacaksan (torch vb. büyük indirme):
+unstructured[pdf]>=0.15.0

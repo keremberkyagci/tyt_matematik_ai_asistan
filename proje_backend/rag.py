@@ -74,7 +74,7 @@ def _get_llm():
     if g_key and "YOUR" not in g_key:
         from langchain_google_genai import ChatGoogleGenerativeAI
         return ChatGoogleGenerativeAI(
-            model="gemini-1.5-flash",
+            model="gemini-3-flash-preview",
             google_api_key=g_key,
             timeout=60,
             temperature=0.7

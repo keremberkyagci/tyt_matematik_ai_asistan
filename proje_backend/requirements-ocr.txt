@@ -1,2 +1,12 @@
-# Sadece UNSTRUCTURED_OCR=1 kullanacaksan (torch vb. büyük indirme):
-unstructured[pdf]>=0.15.0
+# Docling + EasyOCR (taranmış PDF, TYT matematik vb.)
+# Kurulum: pip install -r requirements-ocr.txt
+# CUDA için torch'u https://pytorch.org/get-started/locally/ adresinden ayrı kurun.
+
+-r requirements.txt
+
+langchain-docling>=2.0.0
+docling>=2.90.0
+easyocr>=1.7.0
+
+# EasyOCR görüntü işleme bağımlılıkları (torch zaten sentence-transformers ile geliyor olabilir)
+opencv-python-headless>=4.8.0

@@ -1,0 +1,28 @@
+1. Kitabı Veriye Dönüştürme (Ingestion)
+Kitabı AI'ın anlayacağı parçalara ayırmalısın. Kitabın tamamını tek seferde AI'a yollayamazsın (token sınırı ve maliyet nedeniyle).
+
+Küçük Parçalar (Chunking): Kitabı konu konu veya 500-1000 kelimelik bloklara böl.
+
+Vektörleştirme (Embedding): Bu parçaları sayısal vektörlere çevirip ChromaDB'ye kaydet.
+
+FastAPI Görevi: Python tarafında bir upload_book script'i yaz. Bu script PDF'i okur, parçalar ve ChromaDB'ye gömer.
+
+2. FastAPI "Beyin" Fonksiyonu
+Soru geldiğinde akış şöyle işlemeli:
+
+Öğrenci sorar: "Mutlak değerde kritik nokta nedir?"
+
+Python, bu soruyu sayıya (vektöre) çevirir.
+
+ChromaDB içinde "Mutlak değer" ve "kritik nokta" geçen en alakalı 3-4 paragrafı bulur.
+
+Prompt Enjeksiyonu: Gemini'ye şu komutu yollar: "Aşağıdaki TYT Matematik kitabı bilgilerine dayanarak öğrencinin sorusunu cevapla: [KİTAPTAN ALINAN PARAGRAFLAR] - Soru: [ÖĞRENCİNİN SORUSU]"
+
+3. Hızlı Başlangıç İpucu
+Tüm kitabı aynı anda yüklemekle vakit kaybetme.
+
+Hızlı Test: Sadece "Temel Kavramlar" bölümünün PDF'ini al.
+
+LangChain veya LlamaIndex Kullan: Python tarafında bu kütüphaneler 5-10 satırda PDF'i vektör veri tabanına bağlamanı sağlar.
+
+Aşağıdaki görselleştirme, OGM kitabını sisteme nasıl dahil edeceğini ve AI'ın o veriyi nasıl "bulup çıkardığını" anlamana yardımcı olacaktır:
